@@ -364,6 +364,42 @@
   .bio i { color: var(--ink); }
   .bio .debut { color: var(--ink); }
 
+  /* ---------- Newsletter ---------- */
+  .newsletter { text-align: center; }
+  .newsletter .section-body { max-width: 440px; margin: 0 auto 36px; }
+
+  .soe-signup { max-width: 460px; margin: 0 auto; }
+  .soe-row { display: flex; gap: 8px; margin-bottom: 10px; }
+  .soe-input {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 15px;
+    background: var(--bg-raised);
+    border: 1px solid rgba(232, 229, 223, 0.2);
+    color: var(--ink);
+    font-family: var(--serif-body);
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  .soe-input:focus { border-color: var(--accent); }
+  .soe-input::placeholder { color: var(--ink-faint); }
+  .soe-name { width: 100%; box-sizing: border-box; margin-bottom: 14px; }
+  .soe-button {
+    padding: 12px 24px;
+    font-size: 14px;
+    background: var(--accent);
+    color: #09090f;
+    border: 0;
+    cursor: pointer;
+    font-family: var(--serif-body);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+  }
+  .soe-button:hover { opacity: 0.85; }
+  .soe-fineprint { font-size: 12px; color: var(--ink-faint); line-height: 1.5; margin: 0; }
+
   /* ---------- Contact ---------- */
   .contact { text-align: center; }
   .contact .kicker { margin-bottom: 28px; }
@@ -452,6 +488,7 @@
     <div class="nav-links">
       <a href="#book">The Book</a>
       <a href="#author">The Author</a>
+      <a href="#newsletter">Newsletter</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -523,7 +560,28 @@
 
   <hr class="section-rule">
 
-  <!-- 4 · Contact -->
+  <!-- 4 · Newsletter -->
+  <section id="newsletter" class="newsletter">
+    <div class="measure">
+      <p class="kicker">Stay in the loop</p>
+      <h2 class="section-title">First to know.</h2>
+      <p class="section-body">A book deal, a cover, a release date. I'll write when there's something earned to share — not before.</p>
+
+      <form method="post" action="https://list.dreamd.dev/subscription/form" class="soe-signup">
+        <input type="hidden" name="l" value="66dd5322-beb3-4974-88e2-730cac7a42df">
+        <div class="soe-row">
+          <input id="soe-email" type="email" name="email" required placeholder="your@email.com" autocomplete="email" class="soe-input">
+          <button type="submit" class="soe-button">Notify me</button>
+        </div>
+        <input type="text" name="name" placeholder="First name (optional)" autocomplete="given-name" class="soe-input soe-name">
+        <p class="soe-fineprint">Double opt-in. No noise. Unsubscribe in one click.</p>
+      </form>
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- 5 · Contact -->
   <section id="contact" class="contact">
     <div class="measure">
       <p class="kicker">Contact</p>
