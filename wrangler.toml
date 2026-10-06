@@ -1,6 +1,2 @@
 name = "phillip-austin-green"
 pages_build_output_dir = "public"
-
-[[env.production.routes]]
-pattern = "soe.wegetit.dev/*"
-zone_name = "wegetit.dev"
